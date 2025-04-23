@@ -1,0 +1,1081 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.img {
+    max-width: 100%;
+    display: block;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 20px;
+    background-color: #fff;
+  }
+
+.logotipo a {
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.pagine {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+.pagine a {
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.pagine a:hover {
+    color: #484848;
+}
+
+.moon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.contenitore {
+    max-width: 97%;
+    margin: 0 auto;
+}
+
+.info {
+    position: relative;
+}
+
+.testo-home {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.testo-home h1{
+    font-size: 96px;
+    font-weight: bold;
+}
+
+.testo-home p{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+.image-home img{
+    border-radius: 12px;
+    height: 700px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 195px;
+    padding: 75px 75px 120px;
+}
+
+.intro-grande h2 {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.intro-descrizione p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.evidenza h3{
+    font-size: 32px;
+    font-weight: bold;
+    padding: 0px 75px 20px;
+}
+
+.griglia-parchi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.parchi-card {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.parchi-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.overlay h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    transition: transform 0.4s;
+}  
+
+.parchi-card:hover h2 {
+    transform: translateY(-15px);
+}
+
+.bottone-p{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 100px;
+}
+
+.btn-parchi{
+    background-color: #201F22;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-parchi:hover {
+  background-color: #484848; 
+}
+
+.evidenza-a h3{
+    font-size: 32px;
+    font-weight: bold;
+    padding: 0px 75px 20px;
+}
+
+.a-esperienze{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.attivita-card {
+    position: relative;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.attivita-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.attivita-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+
+.attivita-card .overlay h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    transition: transform 0.4s;
+  }
+  
+.attivita-card:hover h2 {
+    transform: translateY(-15px);
+  }
+
+.bottone-a{
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 100px;
+}
+
+.btn-attività{
+    background-color: #201F22;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-attività:hover {
+  background-color: #484848; 
+}
+
+/* Pagina dei parchi */
+
+.contenitore-parchi {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 37px;
+    width: 97%;
+    margin: 0 auto;
+}
+  
+.parco-card {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 12px;
+    text-decoration: none;
+}
+  
+.parco-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+  
+.gradiente {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+  
+.gradiente h2 {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    transition: transform 0.4s;
+}  
+
+.parco-card:hover h2 {
+    transform: translateY(-15px);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+  }
+
+  /*PAGINE PARCHI SINGOLI*/
+
+.testo-home2 {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 2;
+    color: white;
+}
+  
+.titolo2 h1 {
+    font-size: 96px;
+    font-weight: bold;
+    margin: 0;
+}
+  
+.descrizione p {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    max-width: 500px;
+    margin-left: 100px;
+}
+
+.overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 90%);
+    border-radius: 0 0 12px 12px
+  }
+
+  
+.overlay3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 70%);
+    border-radius: 0 0 12px 12px
+}
+
+  /* Testi sinistra*/
+
+.bio {
+    display: flex;
+    max-width: 98%;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 128px 16px 64px 16px;
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 1.4rem;
+}
+
+.text h4{
+    font-size: 32px;
+}
+
+.text p {
+    font-size: 18px;
+    margin-bottom: 1.4rem;
+}
+
+.images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.images img {
+    border-radius: 12px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sticky {
+    position: sticky;
+    top: 64px;
+}
+
+.griglia{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+}
+
+  /* Card del parco */
+
+.card {
+    display: flex;
+    max-width: 97%;
+    margin: 40px auto;
+    background-color: #EBEBEB;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+  
+  .card-text {
+    flex: 1;
+    padding: 48px;
+  }
+  
+  .card-text h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 25px;
+  }
+  
+  .card-text p {
+    font-size: 18px;
+  }
+  
+  .card-image {
+    flex: 1;
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /*Testi a destra*/
+
+.bio2 {
+    display: flex;
+    gap: 140px;
+    max-width: 97%;
+    margin: 0 auto;
+    padding: 128px 16px 64px 16px;
+}
+  
+.images2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+  
+.images2 img {
+    border-radius: 12px;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.text2 {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+}
+  
+.sticky2 {
+    position: sticky;
+    top: 64px;
+}
+  
+.text2 h2 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 1.4rem;
+    text-align: left;
+}
+  
+.text2 p {
+    font-size: 18px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+  
+/*IMMAGINE SOLA*/
+
+.immagine-sola {
+    width: 97%;
+    padding-top: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+.immagine-sola img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  
+
+.paragrafo {
+    font-size: 18px;
+    width: 80%;
+    max-width: 800px;      
+    margin: 0 auto;         
+    padding: 64px 16px;          
+}
+
+.paragrafo h2{
+    font-size: 48px;
+    font-weight: 800;
+    width: 80%;
+    max-width: 800px;      
+    margin: 0 auto;         
+    padding: 64px 16px;          
+
+}
+    
+.immagine-sola1 {
+    width: 97%;
+    padding-top: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+  
+.immagine-sola1 img {
+    width: 100%;
+    height: 588px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.immagine-sola2 {
+    width: 97%;
+    padding-top: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+  
+.immagine-sola2 img {
+    width: 100%;
+    height: 740px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.immagine-sola3 {
+    width: 97%;
+    padding-top: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.imagine-sola3 img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+
+/*Attività ed Esperienze*/
+
+.sezione {
+    padding: 60px 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contenitore-aa {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 97%
+  }
+  
+  .testo {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000;
+  }
+  
+  .immagine {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 50px;
+    
+  }
+  
+  .immagine img {
+    width: 100%;
+    border-radius: 12px;
+  }
+  
+  .btn-t {
+    background-color: #201F22;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-t:hover {
+    background-color: #484848;
+  }
+
+
+
+  .sezione-inversa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .sezione-inversa .contenuto {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    max-width: 97%
+  }
+  
+  .sezione-inversa .immagine {
+    width: 50%;
+    border-radius: 12px;
+  }
+  
+  .sezione-inversa .testo {
+    width: 50%;
+    font-size: 18px;
+  }
+  
+  .bottone-aa {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 97%;
+    margin-top: 50px;
+  }
+  
+   
+  .btn-aa {
+    background-color: #201F22;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 20px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-aa:hover {
+    background-color: #484848;
+  }
+  
+ .bottone-doppio {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px; 
+    margin-top: 20px;
+    max-width: 97%;
+    width: 100%;
+  }
+
+.attività-parchi {
+    padding: 100px 75px 10px 20px;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.attività-parchi h3{
+    padding: 20px 5px 30px 5px;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+/*Sticky per le attività*/
+
+.bio3 {
+    display: flex;
+    max-width: 98%;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 20px 16px 64px 16px;
+}
+
+.text3  {
+    flex: 1;
+}
+
+.text3 h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 1.4rem;
+}
+
+.text3 h4{
+    font-size: 32px;
+}
+
+.text3 p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.images3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+}
+
+.images3 img {
+    border-radius: 12px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.sticky3 {
+    position: sticky;
+    top: 64px;
+}
+
+  /*Footer*/
+
+  footer {
+    margin-top: 400px;
+  }
+  
+  .footer-bianco {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #EBEBEB;
+    padding: 40px 60px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-sinistra h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 8px;
+  }
+  
+  .footer-sinistra p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .footer-destra {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .footer-destra a {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .footer-nero {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 16px 0;
+    font-size: 13px;
+  }
+
+
+
+
+  
+
+  @media (max-width: 800px) {
+    .testo-home h1 {
+        font-size: 48px;
+    }
+
+    .testo-home p {
+        font-size: 18px;
+    }
+
+    .image-home img {
+        height: 400px;
+    }
+
+    .intro {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+        text-align: left;
+    }
+
+    .intro-grande h2 {
+        font-size: 32px;
+    }
+
+    .intro-descrizione p {
+        font-size: 16px;
+    }
+
+    .evidenza h3 {
+        text-align: left;
+        padding: 50px 20px 40px;
+    }
+
+    .griglia-parchi {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .overlay h2 {
+        font-size: 32px;
+    }
+
+    .parchi-card {
+        height: 400px;
+    }
+
+    .evidenza-a h3 {
+        text-align: left;
+        padding: 50px 20px 40px;
+    }
+
+    .griglia-attivita {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .attivita-card {
+        height: 300px;
+    }
+
+    .attivita-card .overlay h2 {
+        font-size: 32px;
+    }
+
+    .contenitore-parchi {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 97%;
+      }
+    
+      .parco-card {
+        height: 350px; 
+      }
+    
+      .gradiente h2 {
+        font-size: 32px;
+      }
+
+      .testo-home2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        bottom: 40px;
+        left: 20px;
+        right: 20px;
+      }
+    
+      .titolo2 h1 {
+        font-size: 48px;
+        text-align: left;
+      }
+    
+      .descrizione p {
+        font-size: 16px;
+        margin-left: 0;
+        text-align: left;
+      }
+
+        .bio {
+            gap:32px;
+            flex-direction: column;
+        }
+    
+        .text, .images {
+            width: 100%;
+        }
+
+        .bio2 {
+            flex-direction: column; 
+            gap: 64px;
+          }
+          
+          .text2,
+          .images2 {
+            width: 100%;
+          }
+          
+          .text2 {
+            order: 1;
+          }
+          
+          .images2 {
+            order: 2;
+          }
+          
+          .sticky2 {
+            position: static; 
+          }
+          
+          .text2 h2 {
+            font-size: 36px;
+          }
+          
+          .text2 p {
+            font-size: 16px;
+          }
+
+        .card {
+            flex-direction: column;
+          }
+        
+          .card-text {
+            padding: 24px;
+          }
+        
+          .card-text h2 {
+            font-size: 32px;
+          }
+        
+          .card-text p {
+            font-size: 16px;
+          }
+        
+          .card-image {
+            width: 100%;
+            height: auto;
+          }
+        
+          .card-image img {
+            height: auto;
+          }
+
+          .immagine-sola3{
+            width: 0;
+            padding: 0;
+            height: 0;
+          }
+
+          .contenitore-aa {
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+          }
+        
+          .testo,
+          .immagine {
+            width: 100%;
+            align-items: center;
+          }
+        
+          .immagine {
+            align-items: center; 
+          }
+        
+          .btn-t {
+            align-self: center;
+            font-size: 16px;
+          }
+        
+          .testo {
+            text-align: left;
+            font-size: 16px;
+          }
+
+          .sezione-inversa .contenuto {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 40px;
+          }
+        
+          .sezione-inversa .testo,
+          .sezione-inversa .immagine {
+            width: 97%;
+            text-align: left;
+          }
+
+          .btn-aa {
+            font-size: 16px;
+            padding: 16px 28px;
+            align-self: center;
+          }
+        
+          .sezione-inversa .testo {
+            font-size: 16px;
+          }
+
+          .bio3 {
+            flex-direction: column; 
+            gap: 64px;
+          }
+        
+          .text3,
+          .images3 {
+            width: 100%;
+          }
+        
+          .sticky3 {
+            position: static; 
+          }
+        
+          .text3 h2 {
+            font-size: 36px;
+          }
+        
+          .text3 p {
+            font-size: 16px;
+          }
+    
+          /*Footer*/
+
+          .footer {
+            margin-top: 200px;
+          }
+
+          .footer-bianco {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 30px 20px;
+          }
+        
+          .footer-destra a {
+            font-size: 15px;
+          }
+        
+}
+    
+
+
+  
