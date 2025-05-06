@@ -9,10 +9,11 @@ html {
 }
 
 body {
-    padding-top: 72px;
     font-family: "Red Hat Display", sans-serif;
     background-color: var(--bg-color);
-}
+    max-width: 1800px;
+    margin: auto;
+  }
 
 :root {
   --bg-color: #FFFFFF;
@@ -33,10 +34,11 @@ body {
 }
 
 .navbar {
-  position: fixed; 
+  position: sticky;
   top: 0;           
   left: 0;
-  width: 100%;     
+  max-width: 1800px;
+  margin: auto;
   background-color: var(--nav-bg); 
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
@@ -46,6 +48,7 @@ body {
   align-items: center;
   padding: 20px 30px 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  
 }
 
 
@@ -119,11 +122,11 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 195px;
-    padding: 75px 75px 120px;
+    padding: 75px 75px 90px;
 }
 
 .intro-grande h2 {
-    font-size: 48px;
+    font-size: 25px;
     font-weight: 400;
     margin: 0;
 }
@@ -173,6 +176,7 @@ body {
     display: flex;
     align-items: flex-end;
     padding: 20px;
+    border-radius: 12px;
 }
 
 .overlay h2 {
@@ -469,6 +473,7 @@ body {
   
   .card-text p {
     font-size: 18px;
+    margin-top: 20px;
   }
   
   .card-image {
@@ -565,6 +570,10 @@ body {
     margin: 0 auto;         
     padding: 64px 16px;          
 
+}
+
+.paragrafo p {
+  margin-top: 20px;
 }
     
 .immagine-sola1 {
